@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navigation"></nav>
+    <h1>Teams convo templates</h1>
+    <form> 
+        <label for="name_teams">Name:</label>
+        <input type="text" id="name_teams" placeholder="Tech's Name"> <br>
+        <label for="user_name">User's email address:</label>
+        <input type="text" id="user_name" placeholder="User's email">
+    </form>
+    <button type="button" onclick="convoTeams()">Generate Convos</button>
+    
+    <center>
+        <div id="convos_templates_generation_container" class="convos_templates_generation_container">
+            <h2>Openings</h2>
+            <div class="openings_teams" id="openings_teams"></div>
+            <h2>Requests</h2>
+            <div class="requests_teams" id="requests_teams"></div>
+            <h2>Closing</h2>
+            <div class="closings_teams" id="closings_teams"></div>
+        </div>
+    </center>
+    
+
+
+
+</body>
+<script src="script.js"></script>
+</html>

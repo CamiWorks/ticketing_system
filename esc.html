@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escalations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navigation"></nav>
+    <h2 style="text-align: center;">
+       <br> Escalation Information
+    </h2>
+    <article id="esc_article">
+        <div>
+            <form action="">
+                <label for="Issue">Issue:</label> <br>
+                <input type="text" name="Issue" id="Issue"> <br>
+                <label for="Error">Error Message:</label> <br>
+                <input type="text" name="Error" id="Error"> <br>
+                <label for="Device">Type of Device:</label> <br>
+                <select name="Device" id="Device">
+                    <option value="Laptop">Allspring Laptop</option>
+                    <option value="Ipad-Tablet">Ipad / Tablet</option>
+                    <option value="iPhone">Iphone</option>
+                    <option value="Android">Android</option>
+                    <option value="Other">Other</option>
+                </select> <br>
+                <label for="Device_name">Manufacture of the Device:</label> <br>
+                <select name="Device_name" id="Device_name">
+                    <option value="Other">Other</option>
+                    <option value="Dell_Computer">Dell - Computer</option>
+                    <option value="HP_Hewlett-Packard">HP - Hewlett-Packard</option>
+                </select><br>
+                <label for="number">Alternate Contact number:</label> <br>
+                <input type="text" name="number" id="number"> <br>
+                <label for="Location">User's Location:</label> <br>
+                <span id="locations_const"></span>
+                <label for="reach_time">Best time to reach the user (In user's time-zone):</label> <br>
+                <input type="time"name="reach_time" id="reach_time"> <br>
+                <label for="KB">KB article ID / URL:</label> <br>
+                <input type="text" name="KB" id="KB"> <br>
+                <label for="steps">Action Taken/Troubleshooting steps:</label> <br>
+                <textarea name="steps" id="steps" placeholder="You can Copy and Paste the templates of your ticketing." cols="30" rows="10"></textarea> <br>
+                <label for="Add_info">Addictional information</label> <br>
+                <textarea name="Add_info" id="Add_info" placeholder="Add any additional info here" cols="30" rows="10"></textarea> <br>
+            </form>
+            <button type="button" onclick="per_escalation()">Submit</button>
+        </div>
+        
+        <span id="style_esc">
+        <div id="esc_response" style='white-space: pre-wrap'>
+        </div>
+        <button type="button" onclick="copyEvent('esc_response')" id="copyescal">Copy</button> 
+        </span>
+
+      
+
+        <div class="VVVIPUSERS" id="VVVIPUSERS"></div>
+            
+
+    </article>
+</body>
+<script src="script.js"></script>
+</html>

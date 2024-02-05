@@ -1,0 +1,37 @@
+# macOS system files
+.DS_Store
+
+# Node.js dependencies
+node_modules/
+
+# npm-debug.log files
+npm-debug.log
+
+# Mac OS X Finder files
+*.DS_Store
+
+# Compiled files
+*.min.css
+*.min.js
+
+# Dependency directories
+/bower_components/
+
+# Sass cache
+.sass-cache/
+
+# Compiled CSS
+*.css.map
+
+# IDE and editor files
+.idea/
+.vscode/
+
+# Compiled binary files
+*.exe
+*.out
+*.dll
+*.so
+
+# Environment-specific files
+.env

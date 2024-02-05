@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .reponsetable tr td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navigation"></nav>
+
+
+<div class="container_weeknds">
+    <div>
+        <form id="myform">
+
+            
+             <!--mailhandover function -->
+        <h1>Mailbox Handover</h1>
+        <div class="local_form_week_handover">
+            <form>
+                
+            <label for="next_shift_user">Is handover to who ?</label> 
+            <input type="text" name="next_shift_user" id="next_shift_user" placeholder="Name"> <br>
+            <label for="current_shift">Current Shift</label> 
+            <select name="current_shift" id="current_shift"> 
+                <option value="22_7">12:30 - 21:30 EST</option>
+                <option value="6_15">21:00 - 6:00 EST</option>
+                <option value="14_23">5:00 - 14:00 EST</option>
+            </select><br>
+            <label for="next_shift">Next Shift</label> 
+            <select name="next_shift" id="next_shift"> 
+                <option value="22_7">12:30 - 21:30 EST</option>
+                <option value="6_15">21:00 - 6:00 EST</option>
+                <option value="14_23">5:00 - 14:00 EST</option>
+            </select><br>
+            <label for="issues_handover">Any On-going issue(s) to give as handover</label>
+            <input type="text" name="issues_handover" id="issues_handover"> <br>
+            <label for="priority_inciden">Critical/High Priority Incident</label>
+            <input type="text" name="priority_inciden" id="priority_inciden"> <br> <br>
+            <label for="handled_during_shift">INC, REQ & TASK, Handled during the shift</label> <br>
+            INC<input type="number" name="INC_hand" id="INC_hand" class="numberweeksnds"> <br>
+            REQ <input type="number" name="REQ_hand" id="REQ_hand" class="numberweeksnds"> <br>
+            TASK's <input type="number" name="TA_hand" id="TA_hand" class="numberweeksnds"> <br> <br> <br>
+            <label for="counting_weekends">INC, REQ & TASK, count</label> <br> 
+            INC <input type="number" name="INC_count_weekwnds" id="INC_count_weekwnds" class="numberweeksnds"> <br>
+            REQ <input type="number" name="REQ_count_weekwnds" id="REQ_count_weekwnds" class="numberweeksnds"> <br>
+            TASK's <input type="number" name="TA_count_weekwnds" id="TA_count_weekwnds" class="numberweeksnds"> <br>
+            <br>           
+            <label for="backlog_tick_weekend">Number of Backlog tickets</label> <br>
+            <br><div class="tables_tick_inc">   
+                <table class="incident_table">
+                    <thead>Incidents</thead>
+                    <tr>
+    
+                        <td>Sat</td>
+                        <td>Sun</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="sat_inc" id="sat_inc" class="numberweeksnds"></td>
+                        <td><input type="number" name="sun_inc" id="sun_inc" class="numberweeksnds"></td>
+                    </tr>
+                </table> <br> <br>
+                <table class="incident_table">
+                    <thead>Task's / Requests </thead>
+                    <tr>
+                        <td>Sat</td>
+                        <td>Sun</td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" name="sat_task" id="sat_task" class="numberweeksnds"></td>
+                        <td><input type="number" name="sun_task" id="sun_task" class="numberweeksnds"></td> 
+                    </tr> 
+                </table><br>
+
+            </div>
+            <br><br>
+            
+            <label for="request_details">Request Details (Uergency)</label> <br>
+            <input type="text" name="request_details" id="request_details"> <br>
+            <label>Remark</label> <br>
+            <br><label for="remark_week_a">a. Any SLA Violations?</label> 
+            <input type="text" name="remark_week_a" id="remark_week_a">
+            <br><label for="remark_week_b">b. Is there any human resource concern?</label> 
+            <input type="text" name="remark_week_b" id="remark_week_b">
+            <br><label for="remark_week_c">c. Did any important team's communication happened.</label> 
+            <input type="text" name="remark_week_c" id="remark_week_c">
+            </form>
+            
+        </div>
+        <button type="button" onclick="mailHandover()">Create</button>
+   
+        </form>
+    </div>
+
+
+    <div>
+        <h2>Email Alerts</h2>
+        <p>INC example to create a new ET help alert email</p>
+        <a target="_blank" href="">
+            REFERENCE</a>
+        <h2>Ticket designation</h2>
+        <form action="">
+            <label for="confg_item">Configuration Item</label> <br>
+            <input type="text" name="confg_item" id="confg_item">
+        </form>
+        <button type="button" onclick="weekends()">Submit</button>
+        <div>
+            <p id="re_confg_item"></p>
+            <p id="cop"></p>
+        </div> 
+    </div>
+</div>
+
+<!--response--><!--response--><!--response--><!--response--><!--response--><!--response--><!--response-->
+<div id="response_weekends_shift_handover_table" ></div>
+<div id="makeitcopy"></div>
+
+   
+</body>
+<script src="script.js"></script>
+</html>

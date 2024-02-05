@@ -1,0 +1,116 @@
+html {
+    border:none;
+    padding: none;
+    margin: none;
+}
+.artA form label, input, select{
+    margin: 10px;
+}
+#copyaccess, #copyaccessb, #copyaccessc, #tiful, #sectionA,#sectionB {
+    display: none;
+}
+button,#copyaccess,#copyaccessb, #copyaccessc{
+    background-color: rgb(84, 84, 84);
+    padding: 5px;
+    width: 100px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+button:hover ,#copyaccess:hover ,#copyaccessb:hover, #copyaccessc:hover {
+    background-color: white;
+    padding: 5px;
+    width: 100px;
+    color: rgb(84, 84, 84);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#sectionA,#sectionB{
+    margin: 20px;
+    max-width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid black 0.5px;
+    background-color: lightgrey;
+}
+.displaymain{
+    display: flex;
+    justify-content: space-around;
+}
+nav table tr td a{
+    padding: 20px;
+    background-color: lightgray;
+    text-decoration: none;
+    color: black ;
+}
+nav table tr td a:hover{
+    padding: 20px;
+    background-color: black;
+    text-decoration: none;
+    color:  lightgray;
+}
+nav table{
+    margin: 20px;
+}
+h1{
+    text-align: center;
+    margin-top: 50px;
+}
+img{
+    min-width: 40%;
+    max-width: 40%;
+    margin-top: 50px;
+}
+
+#style_esc{
+    display: none;
+    max-width: 49%;
+    padding: 50px;
+}
+#esc_article {
+    display: flex;
+    padding: 50px
+}
+
+#esc_response{
+    min-width: 70%;
+    display: none;
+}
+.OptionTitle{
+    background-color: grey;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+}
+.container_weeknds{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+.container_weeknds div {
+    text-align: center;
+}
+.numberweeksnds{
+    max-width: 40px;
+}
+.incident_table tr td{
+    border: solid 1px black;
+}
+.tables_tick_inc{
+    display: flex;
+    justify-content: space-around;
+}
+.VVVIPUSERS table tr td{
+    border: solid 1px black;
+}
+.openings_teams, .requests_teams, .closings_teams{
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgray;
+    
+    flex-wrap: wrap;
+}.openings_teams div, .requests_teams div, .closings_teams div{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}

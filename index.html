@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ticketing</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+       <nav id="navigation"></nav>
+
+    <h1>Ticketing & Mailing</h1>
+<div class="displaymain">
+    <article class="artA">
+        <label for="email">Email Address:</label>
+        <input type="text" name="email" placeholder="Email Adress" id="userName"> <br>
+        <label for="phone_number">Phone:</label>
+        <input type="text" name="phone_number" placeholder="Phone Number" id="number"> <br>
+        <label for="location">Location</label>
+        <span id="locations_const"></span>
+        <label for="issue">Issue</label>
+        <input type="text" name="issue" placeholder="Issues Presented" id="issues">
+        <label for="recurrent">Recurrent Issues</label>
+        <select name="location" id="recurrent">
+            <option class="OptionTitle" disabled>Blank Templates</option> <!--Title-->
+            <option value="null">Blank Template - Remote Connection</option>
+            <option value="blr">Blank template - No Remote </option>
+            <option class="OptionTitle" disabled>AD Account Templates</option> <!--Title-->
+            <option value="SSPRS">Self Service Password Reset</option>
+            <option value="PSR">Azure Password Reset</option>
+            <option value="ADTEAM">Contact AD team Password reset</option>
+            <option value="BLK">Bitlocker Key</option>
+            <option class="OptionTitle" disabled>COT's Applications</option> <!--Title-->
+            <option value="2MFA">Authenticator-App Set-Up</option>
+            <option value="CM">Chrome is missing</option>
+            <option value="Outlook">Outlook Generic Troubleshooting</option>
+            <option class="OptionTitle" disabled>Standard Operating Environment (SOE)</option> <!--Title-->
+            <option value="MPG">Mmmmm... Cannot Reach this page</option>
+            <option class="OptionTitle" disabled>Network</option> <!--Title-->
+            <option value="W_net_rst">Wifi - Network Reset</option>
+            <option value="DriverMal">Driver error</option>
+            <option class="OptionTitle" disabled>Others</option> <!--Title-->
+            <option value="WF">Wells-Fargo Team</option>
+            <option value="HR">UKG - Human Resources</option>
+            <option value="ghost">Ghost Caller</option>
+        </select> <br>
+    <center><button onclick="execute()">Create Ticket</button></center>
+</article>
+
+
+
+<!--MAILING -->
+
+<aside>
+    <form action="">
+        <label for="INC">INC. Number</label>
+        <input type="text" name="INC" id="INC"> <br>
+        <label for="emialType">Email Type</label>
+        <select name="emialType" id="emialType">
+            <option value="bl">Blank Email template</option>
+            <option value="CB">Contact User back</option>
+            <option value="Re1">Strike 1 & 2</option>
+            <option value="Re3">Last Strike</option>
+            <option value="BD">Resolution Confirmation</option>
+        </select>
+    </form>
+    <center><button onclick="email_user()">Create Email</button></center>
+</aside>
+</div>
+
+<div><p id="emailres"></p>
+    <center><button type="button" onclick="copyEvent('emailres')" id="copyaccessc">Copy</button></center>
+</div>
+<aside>
+    <h2 id="tiful">Ticket Fulfillment</h2>
+    <div id="sectionA">
+        <p id="aresponse"></p>
+        <center><button type="button" onclick="copyEvent('aresponse')" id="copyaccess">Copy</button></center>
+    </div>
+    <div id="sectionB">
+        <p id="bresponse"></p>
+        <center><button type="button" onclick="copyEvent('bresponse')" id="copyaccessb">Copy</button></center>
+    </div>
+</aside>
+
+
+
+</body>
+<script src="script.js"></script>
+</html>
